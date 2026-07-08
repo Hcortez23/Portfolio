@@ -1,0 +1,154 @@
+/* ============================================================
+   herbert cortez — design tokens & global styles
+   Tema: "terminal oscuro" — inspirado en interfaces de desarrollo
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* --- superficie --- */
+  --bg: #0a0c10;
+  --bg-soft: #0d1016;
+  --bg-elevated: #12151c;
+  --bg-card: #14171f;
+  --border: #232833;
+  --border-soft: #1a1e27;
+
+  /* --- texto --- */
+  --text-primary: #edf0f5;
+  --text-secondary: #99a2b5;
+  --text-muted: #5c6479;
+
+  /* --- acento: ámbar terminal --- */
+  --accent: #f2b544;
+  --accent-strong: #ffd27a;
+  --accent-soft: rgba(242, 181, 68, 0.1);
+  --accent-border: rgba(242, 181, 68, 0.35);
+  --accent-ink: #1a1408;
+
+  /* --- estado de proyectos --- */
+  --status-done: #4ade80;
+  --status-progress: #f2b544;
+  --status-planned: #7d8aa8;
+
+  /* --- tipografía --- */
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Courier New', monospace;
+
+  /* --- layout --- */
+  --container: 1180px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --nav-height: 72px;
+
+  /* --- sombras --- */
+  --shadow-md: 0 12px 30px -12px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 24px 60px -20px rgba(0, 0, 0, 0.65);
+
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100svh;
+  overflow-x: clip;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+/* focus visible accesible en toda la app */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* --- utilidades compartidas --- */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding-inline: 20px;
+  }
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+/* respeta la preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
