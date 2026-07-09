@@ -1,0 +1,52 @@
+.wrapper {
+  max-width: 640px;
+  margin-bottom: 56px;
+}
+
+.center {
+  max-width: 640px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent);
+  font-size: 13.5px;
+  letter-spacing: 0.02em;
+  margin-bottom: 14px;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 18px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.center .eyebrow {
+  justify-content: center;
+}
+
+.center .eyebrow::before {
+  display: none;
+}
+
+.title {
+  font-size: clamp(28px, 4vw, 38px);
+}
+
+.description {
+  margin-top: 14px;
+  color: var(--text-secondary);
+  font-size: 16.5px;
+  line-height: 1.65;
+}
+
+@media (max-width: 640px) {
+  .wrapper {
+    margin-bottom: 40px;
+  }
+}
