@@ -1,0 +1,43 @@
+.footer {
+  border-top: 1px solid var(--border-soft);
+  padding-block: 28px;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer p {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.toTop {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 13px;
+  transition: color 0.2s ease;
+}
+
+.toTop:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .inner {
+    justify-content: center;
+    text-align: center;
+  }
+}
