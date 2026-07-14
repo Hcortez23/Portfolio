@@ -10,4 +10,5 @@
 
 export const navigation = [
   { id: 'inicio', label: 'Inicio', path: '~/inicio' },
+  { id: 'sobre-mi', label: 'Sobre mí', path: '~/sobre-mi' },
 ];
