@@ -13,4 +13,5 @@ export const navigation = [
   { id: 'sobre-mi', label: 'Sobre mí', path: '~/sobre-mi' },
   { id: 'tecnologias', label: 'Tecnologías', path: '~/tecnologias' },
   { id: 'proyectos', label: 'Proyectos', path: '~/proyectos' },
+  { id: 'experiencia', label: 'Experiencia', path: '~/experiencia' },
 ];
