@@ -4,6 +4,7 @@ import Hero from './components/sections/Hero/Hero';
 import About from './components/sections/About/About';
 import TechStack from './components/sections/TechStack/TechStack';
 import Projects from './components/sections/Projects/Projects';
+import Experience from './components/sections/Experience/Experience';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <About />
         <TechStack />
         <Projects />
+        <Experience />
       </main>
       <Footer />
     </>
